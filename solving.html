@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elex1 Flashcards</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="styles-Electronics1/solving.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title">Elex1 Flashcards</h1>
+         <nav class="top-nav">
+    <a href="index.html"><img src="icons/flashcards.svg" alt="Play" width="32" height="32" />
+    </a>
+    <a href="solving.html"><img src="icons/solving.svg" alt="Play" width="32" height="32" />
+    </a>
+<a href="pdf-viewer/web/viewer.html"><img src="icons/pdf-viewer.svg" alt="Play" width="32" height="32" />
+</a>
+ <a href="guide.html"><img src="icons/info.svg" alt="Play" width="32" height="32" />
+ </a>
+    </nav>
+  </header>
+<main>
+    <section class="topics-grid">
+      <div class="topic-card" data-topic="semiconductor-diode" tabindex="0" role="button" aria-pressed="false">
+        Semiconductor Diode 
+      </div>
+      <div class="topic-card" data-topic="transistor" tabindex="0" role="button" aria-pressed="false">
+        Transistor      
+      </div>
+      <div class="topic-card" data-topic="transistor-biasing" tabindex="0" role="button" aria-pressed="false">
+        Transistor-Biasing
+      </div>
+      <div class="topic-card" data-topic="transistor-amplifiers" tabindex="0" role="button" aria-pressed="false">
+        Single-Stage-Transistor-Amplifiers
+      </div>
+    </section>
+
+  <section class="flashcard-viewer hidden">
+    <div class="flashcard">
+      <div class="front"></div>
+      <div class="back"></div>
+    </div>
+    <button id="prev" aria-label="Previous">
+      <img src="icons/prev.svg" alt="Play" width="32" height="32" />
+    </button>
+
+<button id="next" aria-label="Next">
+  <img src="icons/next.svg" alt="Play" width="32" height="32" />
+</button>
+
+  </section>
+
+    <section class="progress" aria-live="polite">
+      <p id="progress-info">Showing Semiconductor Diode flashcard 1</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built by Rosario Espadera</p>
+  </footer>
+
+  <script type="module" src="scripts-Electronics1/solving.js"></script>
+  <script type="module" src="scripts-Electronics1/dataLoadersolving.js"></script>
+
+
+<script type="module" src="scripts-Electronics1/app.js"></script>
+</body>
+</html>

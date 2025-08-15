@@ -1,0 +1,192 @@
+/* Reset & base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9fc;
+  color: #222;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c3e50;
+  color: white;
+  padding: 0.75rem 1.25rem;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.top-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.top-nav a {
+  width: 24px;
+  height: 24px;
+  stroke: white;
+}
+
+/* Topics Grid */
+.topics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.topic-card {
+  background: #e0e7ff;
+  border: 2px solid #4f46e5;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.topic-card:hover,
+.topic-card:focus {
+  background: #c7d2fe;
+  outline: none;
+}
+.cache-loader {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.25rem;
+}
+
+/* Flashcard Viewer */
+.flashcard-viewer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.flashcard > .front,
+.flashcard > .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border: 2px solid #4f46e5;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  transition: transform 0.6s ease;
+}
+
+.flashcard > div {
+  position: absolute;
+  min-width: 300px;
+  max-width: 340px;
+  margin: 0 auto;
+  backface-visibility: hidden;
+  background: white;
+  border: 2px solid #4f46e5;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.flashcard > .front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.flashcard > .back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.flashcard.flipped > .front {
+  transform: rotateY(180deg);
+}
+
+.flashcard.flipped > .back {
+  transform: rotateY(360deg);
+  z-index: 3;
+}
+
+/* Slide animations */
+.flashcard.slide-left,
+.flashcard.slide-right {
+  animation-duration: 0.4s;
+  animation-fill-mode: both;
+}
+
+.flashcard.slide-left {
+  animation-name: slideLeft;
+}
+
+.flashcard.slide-right {
+  animation-name: slideRight;
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Progress */
+.progress {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f0f0f0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
